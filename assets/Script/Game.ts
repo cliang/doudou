@@ -3,38 +3,38 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class Game extends cc.Component {
 
-    @property
-    bestScoreLabel:cc.Label = null;
+    @property(cc.Label)
+    bestScoreLabel:cc.Label;
 
-    @property
+    @property(cc.Label)
     scoreLabel:cc.Label = null;
 
-    @property
+    @property(cc.Label)
     timeLabel:cc.Label = null;
 
     @property
-    bestScore:number = null;
+    bestScore:number = 0;
 
     @property
-    score:number = null;
+    score:number = 0;
 
     @property
-    time:number = null;
+    time:number = 0;
 
-    @property
+    @property(cc.Prefab)
     douPrefab:cc.Prefab = null;
 
     @property
-    douList:cc.Node[][];
+    private douList:cc.Node[][];
 
-    @property
+    @property(cc.Sprite)
     panel:cc.Sprite;
 
     @property
-    wNum:number = 8;
+    private wNum:number = 8;
 
     @property
-    hNum:number = 10;
+    private hNum:number = 10;
 
     @property
     idNum:number[] = [8,8,8];
